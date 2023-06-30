@@ -1,12 +1,12 @@
 # Yaml Translation
 
-[![Latest Version](https://img.shields.io/packagist/v/jackjoe/yaml-translation.svg)](https://packagist.org/packages/jackjoe/yaml-translation)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/jackjoe/yaml-translation.svg)](https://packagist.org/jackjoe/yaml-translation/image/stats)
+[![Latest Version](https://img.shields.io/packagist/v/betterapp/yaml-translation.svg)](https://packagist.org/packages/jackjoe/yaml-translation)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/betterapp/yaml-translation.svg)](https://packagist.org/jackjoe/yaml-translation/image/stats)
 
-## Add Yaml file support for Laravel 5 TranslationServiceProvider
+## Add Yaml file support for Laravel 10 TranslationServiceProvider
 
 This package uses Symfony/Yaml parser, and is forked from
-[Devitek/laravel-yaml-translation](https://github.com/Devitek/laravel-yaml-translation)
+[jackjoe/laravel-yaml-translation](https://github.com/jackjoe/laravel-yaml-translation)
 
 ## Installation
 
@@ -14,7 +14,7 @@ This package uses Symfony/Yaml parser, and is forked from
 
 Add Laravel Localization to your `composer.json` file.
 
-    "jackjoe/yaml-translation": "*"
+    "betterapp/laravel-yaml-translation": "^1.0"
 
 Run `composer install` to get the latest version of the package.
 
@@ -31,7 +31,7 @@ You have to replace
 
 with
 
-`'JackJoe\Core\Translation\TranslationServiceProvider',`
+`'betterapp\Core\Translation\TranslationServiceProvider',`
 
 in `config/app.php`.
 

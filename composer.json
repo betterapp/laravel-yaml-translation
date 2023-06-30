@@ -1,10 +1,14 @@
 {
-  "name": "jackjoe/yaml-translation",
+  "name": "betterapp/laravel-yaml-translation",
   "description":
-    "Add YAML file support to Laravel TranslationServiceProvider, fork of devitek/yaml-translation",
+    "Add YAML file support to Laravel TranslationServiceProvider, fork of jackjoe/yaml-translation",
   "keywords": ["laravel", "translations", "yaml"],
   "license": "MIT",
   "authors": [
+    {
+      "name": "Daniel Czestki",
+      "email": "biuro@betterapp.net"
+    },
     {
       "name": "Jack + Joe",
       "email": "hello@jackjoe.be"
@@ -15,18 +19,18 @@
     }
   ],
   "require": {
-    "php": "^7.1",
-    "illuminate/translation": "^6.0",
+    "php": "^8.1",
+    "illuminate/translation": "^10.0",
     "symfony/yaml": "^4.0"
   },
   "autoload": {
     "psr-4": {
-      "JackJoe\\": "src/JackJoe"
+      "betterapp\\LaravelYamlTranslation\\": "src/"
     }
   },
   "extra": {
     "laravel": {
-      "providers": ["JackJoe\\Core\\Translation\\TranslationServiceProvider"]
+      "providers": ["betterapp\\LaravelYamlTranslation\\TranslationServiceProvider"]
     }
   }
 }
