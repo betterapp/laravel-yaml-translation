@@ -1,7 +1,7 @@
 # Yaml Translation
 
-[![Latest Version](https://img.shields.io/packagist/v/betterapp/yaml-translation.svg)](https://packagist.org/packages/jackjoe/yaml-translation)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/betterapp/yaml-translation.svg)](https://packagist.org/jackjoe/yaml-translation/image/stats)
+[![Latest Version](https://img.shields.io/packagist/v/betterapp/laravel-yaml-translation.svg)](https://packagist.org/packages/jackjoe/yaml-translation)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/betterapp/laravel-yaml-translation.svg)](https://packagist.org/jackjoe/yaml-translation/image/stats)
 
 ## Add Yaml file support for Laravel 10 TranslationServiceProvider
 
