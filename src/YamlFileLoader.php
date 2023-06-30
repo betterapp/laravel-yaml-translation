@@ -13,17 +13,34 @@ class YamlFileLoader extends FileLoader
         return ['php', 'yml', 'yaml'];
     }
     
-    protected function loadPaths($path, $locale, $group)
+    /**
+     * @param $paths
+     * @param $locale
+     * @param $group
+     * @return mixed
+     */
+    protected function loadPaths($paths, $locale, $group)
     {
-        foreach ($this->getAllowedFileExtensions() as $extension) {
-            if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension)) {
-                return $this->parseContent($extension, $full);
-            }
-        }
-        
-        return [];
+        return collect($paths)
+            ->reduce(function ($output, $path) use ($locale, $group) {
+                
+                foreach ($this->getAllowedFileExtensions() as $extension) {
+                    if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension)) {
+                        $output = array_replace_recursive($output, $this->parseContent($extension, $full));
+                    }
+                }
+                
+                return $output;
+            }, []);
     }
     
+    /**
+     * @param array $lines
+     * @param $locale
+     * @param $group
+     * @param $namespace
+     * @return array
+     */
     protected function loadNamespaceOverrides(array $lines, $locale, $group, $namespace)
     {
         foreach ($this->getAllowedFileExtensions() as $extension) {
